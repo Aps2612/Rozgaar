@@ -6,7 +6,7 @@ import axios from "axios";
 // Using Axios we make API requests in our application. Once the request is made we get the data in Return, and then we use this data in our project. 
 // Axios provide you more functionality and features and that helps you in building your application quickly. 
 // Axios: https://www.geeksforgeeks.org/axios-in-react-a-guide-for-beginners/
-// When we use fecth api to get the data of any site then using fetch() method we first get the response and then we convert that response to json. But with axiom we directly get the data in the form of json
+// When we use fecth api to get the data of any site then using fetch() method we first get the response and then we convert that response to json. But with axios we directly get the data in the form of json
 import { Button, Form } from "react-bootstrap";
 import styles from "../../../../CSS/Form.module.css";
 import { withTranslation } from "react-i18next";
@@ -40,7 +40,7 @@ class PostJobForm extends Component {
       document.getElementById('recruiterPhoneNumber').style.display = "none";
     }
   };
-
+ 
   handleSubmit = (event) => {
     event.preventDefault();   //stop the default function of button and provide validation before the link or a form get submitted.
 // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
@@ -61,7 +61,7 @@ class PostJobForm extends Component {
     else if (this.state.category === "सुरक्षा गार्ड") englishCategory = "SECURITY GUARD";
     else englishCategory = this.state.category;
     axios
-      .post("https://pacific-taiga-02637.herokuapp.com/jobs", {
+      .post("http://localhost:3030/jobs", {
         title: this.state.title,
         recruiterEmailId: this.state.recruiterEmailId,
         recruiterPhoneNumber: this.state.recruiterPhoneNumber,

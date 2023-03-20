@@ -24,15 +24,15 @@ class ApplyJob extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     // console.log("From handleSubmit", this.state.aadharNumber);
-
+    // instead of axios we can also use fetch() method of javascript to fetch api
     axios
-      .post(
-        `https://pacific-taiga-02637.herokuapp.com/jobs/${this.props.jobId}/apply`,
+      .post(   // This post method is used to insert data in mongoDB
+        `http://localhost:3030/jobs/${this.props.jobId}/apply`,
         {
           aadharNumber: this.state.aadharNumber,
         }
       )
-      .then((response) => {
+      .then((response) => {   // response is what we got by axios method
         console.log(response);
         if (response.status === 200) {
           const data = response.data;

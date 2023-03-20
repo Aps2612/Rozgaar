@@ -12,7 +12,7 @@ import { withTranslation } from "react-i18next";
 
 function Banner({ t }) {
   return (
-    // fluid jumbotron is used to span the width of the page i.e, To make the jumbotron full width, and without rounded corners,.
+    // fluid jumbotron is used to span the width of the page i.e, To make the jumbotron full width, and without rounded corners.
     <Jumbotron id="home" className={styles.Jumbotron} fluid>
 
       <Container className={styles.Container}>

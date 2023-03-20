@@ -17,7 +17,7 @@ class Opportunity extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://pacific-taiga-02637.herokuapp.com/jobs/?CATEGORY=${this.props.category}`
+        `http://localhost:3030/jobs/?CATEGORY=${this.props.category}`
       )
       .then(
         (res) => {

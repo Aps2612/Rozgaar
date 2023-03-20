@@ -17,7 +17,7 @@ class Candidate extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://pacific-taiga-02637.herokuapp.com/jobs/candidates/?CATEGORY=${this.props.category}`
+        `http://localhost:3030/jobs/candidates/?CATEGORY=${this.props.category}`
       )
       .then(
         (res) => {
@@ -32,10 +32,10 @@ class Candidate extends Component {
       );
   }
 // firstly constructor run and then the render.
-// when any updation are perfomed whether in any component orr inside component did mount method then too also render method is called.
+// when any updation are perfomed whether in any component orr inside componentdidmount method then too also render method is called.
 // Component did mount ka use hmesha api aur async jaisi cheeze ko call krne ke liye hota h kuki component di mount hmesha constructor aur render ke baad call hota h toh uss time tak saara html load ho chuka hota h.Toh agr hume api call time kucch html ya kisi cheez ki jrurat h toh asaani se ho jaata h.Agr constructor me call krte h h api toh uss time tak saaara html ni load hua hota h toh problem ho skti h.
 // flow of call:  constructor-->render-->componentdidmount
-// state update hone pee render aur componentdidUpdate chlta h aur componentdid mount bs ek baar jab saari html load ho jaayegi tb chlega means there is no effect of usestate and props changes in componentdidmount
+// state update hone pee render aur componentdidUpdate chlta h aur componentdidmount bs ek baar jab saari html load ho jaayegi tb chlega means there is no effect of usestate and props changes in componentdidmount
 
 // ComponentDidUpdate ke andar agr hum kucch update krre h toh condition lgaake krenge ni toh infinite loop chal jaayega kuki ComponentDidUpdate hrr baar jab state change hoti h tb call hota h
 // If we are changing state inside render method then infinite loop happens so if we want to update any state then always do that in componentDidUpdate method
