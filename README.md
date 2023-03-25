@@ -71,10 +71,9 @@ I have identified 9 categories of job-seekers to make the platform more intuitiv
 
 ### Pending Tasks
 
-- Unit Tests - Due to shortage of time, I couldn't write many unit-test.
 - Login Sessions and Dashboard of Applications
 - No Authentication for recruiter
-- facility to remoce the job once you gets hired
+- Facility to remove the job once you gets hired
 
 ### Additional Features to add:
 
