@@ -6,7 +6,7 @@
 
 - Make a job-search platofrm for Blue Collar Workers.
 
-**Note** : SMS can be sent to only Twilio verified numbers as I am not using the paid service.
+
 
 ## 🚧 Technology Stack
 
@@ -16,8 +16,7 @@
 - **Database** - MongoDB
 - **Cloud database service** - MongoDB Atlas
 - **Module to send emails** - NodeMailer
-- **SMS sending** - Twilio
-- **Deployment** - Heroku
+- **Deployment** - Vercel
 
 ## ⬇️ Installation
 
@@ -55,8 +54,6 @@ I have identified 9 categories of job-seekers to make the platform more intuitiv
 1. Register
 2. Update Profile
 3. Apply on jobs - just by clicking - as simple as that.
-4. The applicant gets an SMS on his/her phone number after applying to a job.
-   ![SMS TO APPLICANT](https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-Backend/raw/main/assets/msgToApplicant.jpg)
 
 #### For Job Poster
 
@@ -64,8 +61,6 @@ I have identified 9 categories of job-seekers to make the platform more intuitiv
 2. Get applications on your posted jobs and shortlist.
 3. **Ease the flow** for both parties
    - Job Seekers Profiles will be available all throughout, Recruiters can directly see their profiles and give them a message/call
-4. Job Poster gets an email when someone applies on a job posted by him/her.
-   ![MAIL TO RECRUITER](https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-Backend/raw/main/assets/recruiterMail.PNG)
 
 #### Problems in Existing Solutions
 
@@ -78,10 +73,12 @@ I have identified 9 categories of job-seekers to make the platform more intuitiv
 
 - Unit Tests - Due to shortage of time, I couldn't write many unit-test.
 - Login Sessions and Dashboard of Applications
+- No Authentication for recruiter
+- facility to remoce the job once you gets hired
 
-### Additional Features to be added after Hackathon:
+### Additional Features to add:
 
-- Multi-lingual
+- Multi-lingual -> Done
 - Filters according to location, salary etc.
 - Stars/Reviews for job seekers
-- Register by calling also (for job seekers) - simply call on a support number and automated clicks on phone
+
